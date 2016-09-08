@@ -1,31 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { TracksService } from './service/tracks.service';
 import {Track} from "./model/track";
-import './rxjs-operators';
+import { TracksService } from './service/tracks.service';
 
 @Component({
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
-  providers: [TracksService]
+  styleUrls: ['app.component.css']
 })
 export class AppComponent implements OnInit {
 
   errorMessage: string;
   tracks: Track[];
-  mode = 'Observable';
+  mode = 'Promise';
 
-  constructor (private trackService: TracksService) {}
+  constructor (private tracksService: TracksService) {}
 
   ngOnInit() { this.getTracks(); }
 
   getTracks() {
-    this.trackService.getTracks()
-      .subscribe(
+    this.tracksService.getTracks()
+      .then(
         tracks => this.tracks = tracks,
         error =>  this.errorMessage = <any>error);
   }
 
-  title = 'app works!';
+  title = 'app works';
 }
