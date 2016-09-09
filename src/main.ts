@@ -1,12 +1,12 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import "./polyfills.ts";
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { AppComponent, environment } from './app/';
-import {HTTP_PROVIDERS} from '@angular/http';
-import { TracksService } from './app/service/tracks.service';
+import { environment } from './environments/environment';
+import { AppModule } from './app/';
 
 if (environment.production) {
   enableProdMode();
 }
 
-bootstrap(AppComponent, [HTTP_PROVIDERS, TracksService]);
-
+platformBrowserDynamic().bootstrapModule(AppModule);

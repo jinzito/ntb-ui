@@ -1,10 +1,10 @@
-import { NodeBotUi3Page } from './app.po';
+import { NodeBotUi2Page } from './app.po';
 
-describe('node-bot-ui3 App', function() {
-  let page: NodeBotUi3Page;
+describe('node-bot-ui2 App', function() {
+  let page: NodeBotUi2Page;
 
   beforeEach(() => {
-    page = new NodeBotUi3Page();
+    page = new NodeBotUi2Page();
   });
 
   it('should display message saying app works', () => {

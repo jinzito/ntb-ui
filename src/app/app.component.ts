@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import {Track} from "./model/track";
-import { TracksService } from './service/tracks.service';
+import {Component, OnInit} from '@angular/core';
+import {TracksService} from "./service/track.service";
+import {Track} from "./model/Track";
 
 @Component({
-  moduleId: module.id,
   selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
 
   errorMessage: string;
@@ -25,5 +25,5 @@ export class AppComponent implements OnInit {
         error =>  this.errorMessage = <any>error);
   }
 
-  title = 'app works';
+  title = 'app works! 11';
 }

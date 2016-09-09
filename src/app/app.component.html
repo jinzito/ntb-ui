@@ -1,6 +1,7 @@
-<h1> {{title}}  sa </h1>
-<h1>Tour de Tracks ({{mode}})</h1>
-<h3>Tracks:</h3>
+<h1>
+  {{title}}
+  <button md-raised-button>RAISED</button>
+</h1>
 <ul>
   <li *ngFor="let track of tracks">
     {{track.initUrl}}

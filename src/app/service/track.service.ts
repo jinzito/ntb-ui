@@ -8,18 +8,10 @@ export class TracksService {
 
   constructor(private http: Http) { }
 
-  private requestUrl = 'http://localhost/tracks';
-
-  createAuthorizationHeader(headers:Headers) {
-    headers.append('Authorization', 'Basic ' +
-      btoa('username:password'));
-  }
+  private requestUrl = 'http://127.0.0.1/api/tracks';
 
   getTracks(): Promise<Track[]> {
-    let headers = new Headers();
-    headers.append('Access-Control-Allow-Origin', '*')
-
-    return this.http.post(this.requestUrl, '', { headers: headers })
+    return this.http.post(this.requestUrl, '')
       .toPromise()
       .then(this.extractData)
       .catch(this.handleError);
