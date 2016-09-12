@@ -1,21 +1,20 @@
-import {Injectable} from '@angular/core'
-import { Http, Response} from '@angular/http';
-import { Track } from '../model/track';
-import 'rxjs/Rx';
+import { Injectable } from '@angular/core';
+import { Http} from '@angular/http';
+import { Info } from "../model/info";
 import { Mapper } from "./mapper";
 
 @Injectable()
-export class TracksService {
+export class InfoService {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {}
 
-  private requestUrl = 'http://127.0.0.1/api/tracks';
+  private requestUrl = 'http://127.0.0.1/api/info';
   private mapper = new Mapper();
 
-  getTracks(): Promise<Track[]> {
+  getInfo(): Promise<Info> {
     return this.http.post(this.requestUrl, '')
       .toPromise()
-      .then(res => this.mapper.mapTracks(res.json()))
+      .then(res => this.mapper.mapInfo(res.json()))
       .catch(this.handleError);
   }
 
@@ -25,5 +24,4 @@ export class TracksService {
     console.error(errMsg); // log to console instead
     return Promise.reject(errMsg);
   }
-
 }

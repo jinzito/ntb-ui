@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { MdButtonModule } from '@angular2-material/button';
 import { MdTabsModule } from '@angular2-material/tabs';
 import { TracksService } from "./service/track.service";
+import { InfoComponent } from './view/info.component';
+import { InfoService } from "./service/info.service";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, InfoComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,7 @@ import { TracksService } from "./service/track.service";
     MdButtonModule,
     MdTabsModule
   ],
-  providers: [TracksService],
+  providers: [TracksService, InfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
