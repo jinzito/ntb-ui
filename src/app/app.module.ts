@@ -25,4 +25,5 @@ import { InfoService } from "./service/info.service";
   providers: [TracksService, InfoService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

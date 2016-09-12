@@ -10,8 +10,8 @@ import { Info } from "../model/info";
 })
 export class InfoComponent implements OnInit {
 
-  info : Info;
-  infoBytesWritten:number;
+  info: Info;
+  infoBytesWritten: number;
   errorMessage: string;
 
   constructor(private infoService: InfoService) {

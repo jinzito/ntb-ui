@@ -1,12 +1,11 @@
 import { Track } from "../model/track";
 import { Info } from "../model/info";
-import getPrototypeOf = Reflect.getPrototypeOf;
 import { isArray } from "rxjs/util/isArray";
 import 'rxjs/util/isArray';
 
 export class Mapper {
 
-  protected mapSimpleProperties(source:Object, dest:Object) {
+  protected mapSimpleProperties(source: Object, dest: Object) {
     for (var prop in source) {
       if (typeof source[prop] === "number" || typeof source[prop] === "string") {
         dest[prop] = source[prop];
@@ -16,13 +15,13 @@ export class Mapper {
     return dest;
   }
 
-  public mapTrack(source:Object):Track {
-    var result:Track = new Track();
+  public mapTrack(source: Object): Track {
+    var result: Track = new Track();
     this.mapSimpleProperties(source, result);
     return result;
   }
 
-  public mapTracks(source:Array<Object>):Array<Track> {
+  public mapTracks(source: Array<Object>): Array<Track> {
     var result = Array<Track>();
     for (let trackObject of source) {
       result.push(this.mapTrack(trackObject));
@@ -30,8 +29,8 @@ export class Mapper {
     return result;
   }
 
-  public mapInfo(source:Object):Info {
-    var result:Info = new Info();
+  public mapInfo(source: Object): Info {
+    var result: Info = new Info();
     this.mapSimpleProperties(source, result);
     if (source.hasOwnProperty('processedTrack')) {
       result.processedTrack = this.mapTrack(source['processedTrack']);

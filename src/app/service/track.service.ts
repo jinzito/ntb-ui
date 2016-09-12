@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core'
-import { Http, Response} from '@angular/http';
+import { Injectable } from '@angular/core'
+import { Http, Response } from '@angular/http';
 import { Track } from '../model/track';
 import 'rxjs/Rx';
 import { Mapper } from "./mapper";
@@ -7,7 +7,8 @@ import { Mapper } from "./mapper";
 @Injectable()
 export class TracksService {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+  }
 
   private requestUrl = 'http://127.0.0.1/api/tracks';
   private mapper = new Mapper();
@@ -19,7 +20,7 @@ export class TracksService {
       .catch(this.handleError);
   }
 
-  private handleError (error: any) {
+  private handleError(error: any) {
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg); // log to console instead
