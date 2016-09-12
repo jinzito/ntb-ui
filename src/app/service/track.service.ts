@@ -18,7 +18,6 @@ export class TracksService {
   }
 
   private extractData(res: Response) {
-    let d = 9;
     let result = [];
     let body = res.json();
     for (let object of body) {

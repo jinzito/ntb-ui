@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { MdButtonModule } from '@angular2-material/button';
-import {TracksService} from "./service/track.service";
+import { MdTabsModule } from '@angular2-material/tabs';
+import { TracksService } from "./service/track.service";
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import {TracksService} from "./service/track.service";
     BrowserModule,
     FormsModule,
     HttpModule,
-    MdButtonModule
+    MdButtonModule,
+    MdTabsModule
   ],
   providers: [TracksService],
   bootstrap: [AppComponent]
