@@ -1,0 +1,37 @@
+<md-tab-group>
+
+  <md-tab>
+    <template md-tab-label>Init</template>
+    <template md-tab-content>
+      <h1>
+        {{title}}
+      </h1>
+    </template>
+  </md-tab>
+
+  <md-tab>
+    <template md-tab-label>Status</template>
+    <template md-tab-content>
+      <h1>
+        <app-info></app-info>
+        <button md-raised-button>RAISED</button>
+      </h1>
+    </template>
+  </md-tab>
+
+  <md-tab>
+    <template md-tab-label>Tracks</template>
+    <template md-tab-content>
+      <h1>Some more tab content</h1>
+      <ul>
+        <li *ngFor="let track of tracks">
+          {{track.initUrl}}
+        </li>
+
+        <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
+      </ul>
+    </template>
+  </md-tab>
+
+</md-tab-group>
+
