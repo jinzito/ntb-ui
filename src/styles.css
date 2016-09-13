@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+.md-button.md-fab {
+  line-height: 15.6rem;
+  min-width: 0;
+  width: 15.6rem;
+  height: 15.6rem;
+  border-radius: 50%;
+}

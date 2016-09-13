@@ -9,18 +9,22 @@ import { MdTabsModule } from '@angular2-material/tabs';
 import { TracksService } from "./service/track.service";
 import { InfoComponent } from './view/info.component';
 import { InfoService } from "./service/info.service";
-
+import { PlayerComponent } from "./view/player.component";
+import { MdCardModule } from '@angular2-material/card';
+import { MdIconModule } from '@angular2-material/icon';
 
 @NgModule({
   declarations: [
-    AppComponent, InfoComponent
+    AppComponent, InfoComponent, PlayerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MdButtonModule,
-    MdTabsModule
+    MdTabsModule,
+    MdCardModule,
+    MdIconModule
   ],
   providers: [TracksService, InfoService],
   bootstrap: [AppComponent]

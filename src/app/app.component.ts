@@ -26,6 +26,4 @@ export class AppComponent implements OnInit {
         tracks => this.tracks = tracks,
         error => this.errorMessage = <any>error);
   }
-
-  title = 'app works! 11';
 }

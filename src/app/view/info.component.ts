@@ -10,8 +10,7 @@ import { Info } from "../model/info";
 })
 export class InfoComponent implements OnInit {
 
-  info: Info;
-  infoBytesWritten: number;
+  info: Info  = new Info();
   errorMessage: string;
 
   constructor(private infoService: InfoService) {
@@ -20,7 +19,7 @@ export class InfoComponent implements OnInit {
   ngOnInit() {
     this.infoService.getInfo()
       .then(
-        info => (this.info = info, this.infoBytesWritten = info.bytesWritten),
+        info => this.info = info,
         error => this.errorMessage = <any>error);
   }
 
