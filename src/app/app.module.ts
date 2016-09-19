@@ -12,6 +12,7 @@ import { InfoService } from "./service/info.service";
 import { PlayerComponent } from "./view/player.component";
 import { MdCardModule } from '@angular2-material/card';
 import { MdIconModule } from '@angular2-material/icon';
+import { MdListModule } from '@angular2-material/list';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MdIconModule } from '@angular2-material/icon';
     MdButtonModule,
     MdTabsModule,
     MdCardModule,
-    MdIconModule
+    MdIconModule,
+    MdListModule
   ],
   providers: [TracksService, InfoService],
   bootstrap: [AppComponent]

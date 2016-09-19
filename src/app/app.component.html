@@ -20,14 +20,16 @@
   <md-tab>
     <template md-tab-label>Tracks</template>
     <template md-tab-content>
-      <h1>Some more tab content</h1>
-      <ul>
-        <li *ngFor="let track of tracks">
-          {{track.initUrl}}
-        </li>
-
-        <div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
-      </ul>
+      <md-list>
+        <md-list-item *ngFor="let track of tracks">
+          <img md-list-avatar src="" alt="">
+          <h3 md-line> {{track.initUrl}} </h3>
+          <p md-line>
+            <span> {{track.id}} </span>
+            <span class="demo-2"> -- {{track.created}} </span>
+          </p>
+        </md-list-item>
+      </md-list>
     </template>
   </md-tab>
 
