@@ -1,10 +1,10 @@
-import { NodeBotUi2Page } from './app.po';
+import { MigrationProjectPage } from './app.po';
 
-describe('node-bot-ui2 App', function() {
-  let page: NodeBotUi2Page;
+describe('migration-project App', function() {
+  let page: MigrationProjectPage;
 
   beforeEach(() => {
-    page = new NodeBotUi2Page();
+    page = new MigrationProjectPage();
   });
 
   it('should display message saying app works', () => {

@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor/globals';
 
-export class NodeBotUi2Page {
+export class MigrationProjectPage {
   navigateTo() {
     return browser.get('/');
   }
