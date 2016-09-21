@@ -1,4 +1,4 @@
-<md-tab-group>
+<md-tab-group >
 
   <md-tab>
     <template md-tab-label>Init</template>
@@ -17,19 +17,12 @@
     </template>
   </md-tab>
 
-  <md-tab>
+  <md-tab class="ccc">
     <template md-tab-label>Tracks</template>
     <template md-tab-content>
-      <md-list>
-        <md-list-item *ngFor="let track of tracks">
-          <img md-list-avatar src="" alt="">
-          <h3 md-line> {{track.initUrl}} </h3>
-          <p md-line>
-            <span> {{track.id}} </span>
-            <span class="demo-2"> -- {{track.created}} </span>
-          </p>
-        </md-list-item>
-      </md-list>
+      <div *ngFor="let track of tracks">
+        <app-track-info [track]="track"></app-track-info>
+      </div>
     </template>
   </md-tab>
 

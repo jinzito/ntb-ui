@@ -13,10 +13,12 @@ import { PlayerComponent } from "./view/player.component";
 import { MdCardModule } from '@angular2-material/card';
 import { MdIconModule } from '@angular2-material/icon';
 import { MdListModule } from '@angular2-material/list';
+import { MdToolbarModule } from '@angular2-material/toolbar';
+import { TrackInfoComponent } from "./view/track-info/track-info.component";
 
 @NgModule({
   declarations: [
-    AppComponent, InfoComponent, PlayerComponent
+    AppComponent, InfoComponent, PlayerComponent, TrackInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { MdListModule } from '@angular2-material/list';
     MdTabsModule,
     MdCardModule,
     MdIconModule,
-    MdListModule
+    MdListModule,
+    MdToolbarModule
   ],
   providers: [TracksService, InfoService],
   bootstrap: [AppComponent]
