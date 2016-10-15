@@ -8,5 +8,11 @@ export class Track {
   creator: string;
   // errorStatus: TrackErrorStatusEnum;
   errorStatus: string;
-  storageId:String;
+  storageId: String;
+  storageUrl: String;
+  title: String;
+  author: String;
+  coverSrc: String;
+
+  localCoverSrc:String; //will be generated on client side depends on evn
 }

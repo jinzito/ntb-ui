@@ -2,6 +2,7 @@ import { Track } from "../model/track";
 import { Info } from "../model/info";
 import { isArray } from "rxjs/util/isArray";
 import 'rxjs/util/isArray';
+import { environment } from "../../environments/environment";
 
 export class Mapper {
 
@@ -17,7 +18,9 @@ export class Mapper {
 
   public mapTrack(source: Object): Track {
     var result: Track = new Track();
+    console.log('mapTrack', source.hasOwnProperty('title') ? source['title'] : " ");
     this.mapSimpleProperties(source, result);
+    result.localCoverSrc = environment.coverPath + result._id + ".jpg";
     return result;
   }
 
